@@ -40,9 +40,9 @@ If everything went as expected, the binaries should be in `install/bin`.
 Each tool comes with its own usage instructions. You can access the help message for any tool by running it with the -h or --help option.
 
 ## Tools Included
-filter_five_end: Filtering alignments based on 5-prime  
-two_read_bam_combiner: Combine alignments of R1 and R2 and filter out low quality mapping 
-get_stats: Calculates various statistics from BAM files.
+filter_five_end: Filters alignments based on the 5-prime end (extracted from the cigar field).
+two_read_bam_combiner: Combines alignments of R1 and R2 and filter out low quality mappings. 
+get_stats: Calculates various statistics from the BAM file.
 
 ## License
 This project is licensed under the CeCILL License - see the [LICENSE file](http://www.cecill.info/licences/Licence_CeCILL_V2.1-en.html) for details.
