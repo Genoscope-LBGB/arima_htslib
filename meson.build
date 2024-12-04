@@ -3,7 +3,7 @@ project(
   version : '0.1',
   default_options : [
     'buildtype=release', 'warning_level=3',
-    'default_library=static',
+    'c_std=c99', 'default_library=static',
   ],
 )
 
