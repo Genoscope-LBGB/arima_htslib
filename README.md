@@ -36,18 +36,15 @@ meson install -C build
 
 If everything went as expected, the binaries should be in `install/bin`.
 
-1. **Clone the repository**
+1. **Install htslib**
+
+Ensure that htslib is installed and accessible on your system. Environnment variables HTSLIB_INCDIR and HTSLIB_LIBDIR should be set for compilation.
+
+2. **Clone the repository and install**
 
 ```bash
 git clone [https://github.com/yourusername/yourrepository.git](https://github.com/institut-de-genomique/arima_htslib.git)
 cd arima_htslib
-```
-
-2. **Install htslib**
-
-Ensure that htslib is installed and accessible on your system. Environnment variables HTSLIB_INCDIR and HTSLIB_LIBDIR should be set for compilation.
-
-```bash
 make
 ```
 This will compile all the tools and place the executables in the bin/ directory.
