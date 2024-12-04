@@ -1,0 +1,5 @@
+build
+.cache
+subprojects/htslib-1.21
+subprojects/packagecache 
+subprojects/zlib-1.3.1

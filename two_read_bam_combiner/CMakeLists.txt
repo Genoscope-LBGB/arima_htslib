@@ -1,3 +1,0 @@
-add_executable(two_read_bam_combiner two_read_bam_combiner.c)
-target_link_libraries(two_read_bam_combiner PRIVATE htslib-static)
-
