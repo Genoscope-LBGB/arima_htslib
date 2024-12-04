@@ -22,32 +22,19 @@ The original [Arima Genomics mapping pipeline](https://github.com/ArimaGenomics/
 ## Prerequisites
 
 - **C Compiler**: GCC or Clang supporting C99 standard.
-- **htslib**: Version 1.10 or higher.
+- [Meson](https://mesonbuild.com/index.html) build system
 
 ## Installation
 
-You will need the [Meson](https://mesonbuild.com/index.html) build system to compile the code. After it has been installed
-run the following commands:
 ```
+git clone https://github.com/institut-de-genomique/arima_htslib
+cd arima_htslib
 meson setup build --prefix=$(pwd)/install -Dwrap_mode=forcefallback
 meson compile -C build
 meson install -C build
 ```
 
 If everything went as expected, the binaries should be in `install/bin`.
-
-1. **Install htslib**
-
-Ensure that htslib is installed and accessible on your system. Environnment variables HTSLIB_INCDIR and HTSLIB_LIBDIR should be set for compilation.
-
-2. **Clone the repository and install**
-
-```bash
-git clone [https://github.com/yourusername/yourrepository.git](https://github.com/institut-de-genomique/arima_htslib.git)
-cd arima_htslib
-make
-```
-This will compile all the tools and place the executables in the bin/ directory.
 
 ## Usage
 Each tool comes with its own usage instructions. You can access the help message for any tool by running it with the -h or --help option.
