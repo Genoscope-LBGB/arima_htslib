@@ -6,7 +6,7 @@ all: build-bin
 build-bin:
 	. /env/products/fgtools/2.0/bin/fg_bashfix && \
         module load meson ninja-build cmake/3.19.1 && \
-        meson setup build --prefix=$(pwd)/install -Dwrap_mode=forcefallback && \
+        meson setup build --prefix=$(PWD)/install -Dwrap_mode=forcefallback && \
         meson compile -C build && \
         meson install -C build
 
