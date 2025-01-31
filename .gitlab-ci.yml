@@ -1,0 +1,18 @@
+stages:
+  - deploy
+
+variables:
+  deploygroup: "rdbioseq"
+  moduleversion: "0.1"
+  modulesnapshot: "false"
+  
+Deploy:
+  stage: deploy
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "main"'
+  variables:
+    PROJECT_PATH: $CI_PROJECT_PATH
+    modulename: "arima_htslib"
+  trigger:
+    project: downstream/modules
+    strategy: depend
