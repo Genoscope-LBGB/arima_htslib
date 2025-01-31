@@ -11,4 +11,4 @@ build-bin:
         meson install -C build
 
 install:
-	cp -r install/* $(prefix)/
+	cp -r install/* $(PREFIX)/
