@@ -5,7 +5,7 @@ all: build-bin
 
 build-bin:
 	. /env/products/fgtools/2.0/bin/fg_bashfix && \
-        module load meson && \
+        module load meson gcc/12 ninja && \
         meson setup build --prefix=$(pwd)/install -Dwrap_mode=forcefallback && \
         meson compile -C build && \
         meson install -C build
