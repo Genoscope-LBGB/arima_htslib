@@ -1,9 +1,9 @@
 # Only for Genoscope internal usage, please use the build instructions in the
 # Readme file for compilation commands 
 
-all: build
+all: build-bin
 
-build:
+build-bin:
 	. /env/products/fgtools/2.0/bin/fg_bashfix && \
         module load meson && \
         meson setup build --prefix=$(pwd)/install -Dwrap_mode=forcefallback && \
