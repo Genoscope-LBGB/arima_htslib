@@ -1,18 +1,18 @@
-stages:
+include:
+  - project: rdbioseq/cicd
+    file: cicd.yml
+    inputs:
+      module-name: "arima_htslib"
+      cd-branch: "main"
+      other-branches-as-named: true
+
+stages: 
   - deploy
 
-variables:
-  deploygroup: "rdbioseq"
-  moduleversion: "0.1"
-  modulesnapshot: "false"
-  
-Deploy:
+deploy:
   stage: deploy
-  rules:
-    - if: '$CI_COMMIT_BRANCH == "main"'
-  variables:
-    PROJECT_PATH: $CI_PROJECT_PATH
-    modulename: "arima_htslib"
-  trigger:
-    project: downstream/modules
-    strategy: depend
+  extends: .deploy
+
+deploy-futur:
+    stage: deploy
+    extends: .deploy-futur
